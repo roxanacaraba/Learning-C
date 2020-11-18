@@ -1,0 +1,4 @@
+Jim, Salesman 
+Pam, Receptionist 
+Mike, Manager
+Keo , Costumer service
