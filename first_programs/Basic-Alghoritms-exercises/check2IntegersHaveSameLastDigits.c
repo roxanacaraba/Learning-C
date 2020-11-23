@@ -2,6 +2,8 @@
 
 #include<stdio.h>
 
+int test(int num1, int num2);
+
 int main(void)
 {
     printf("%d\n", test(123, 435));
