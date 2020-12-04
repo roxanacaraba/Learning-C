@@ -1,4 +1,4 @@
-// Sa se afiseze elementele unei matrici parcurgand matricea in ordinea acelor de ceasornic.
+// Sa se afiseze elementele unei matrici 4 x 4 parcurgand matricea in ordinea acelor de ceasornic.
 
 #include<stdio.h>
 
@@ -8,15 +8,16 @@ int main(){
                          {5, 6, 7, 8},
                          {9, 10, 11, 12}, 
                          {13, 14, 15, 16}};
+
     int i, j, k, t, u, w;
     for(i = 0; i < n; i++){
         printf("%d, ", matrice[n-n][i]);
     }
-    for(j = 1; j < n; j++){
-        printf("%d, ", matrice[j][n-1]);
+    for(j = 1; j < n; j++){                         //for(j = n-1; j > 0; j--){
+        printf("%d, ", matrice[j][n-1]);           //    printf("%d, ", matrice[n-j][n-1]);}                                    
     }
-    for(k = 2; k >= 0; k--){
-        printf("%d, ", matrice[n-1][k]);
+    for(k = 2; k >= 0; k--){                      //  for(k = n; k > 0; k--){
+        printf("%d, ", matrice[n-1][k]);         //       printf("%d, ", matrice[n-1][k]);}
     }
     for(t = 2; t >= 1; t--){
         printf("%d, ", matrice[t][n-n]);
