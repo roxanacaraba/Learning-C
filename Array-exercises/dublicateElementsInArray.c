@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 int main(){
-    int arr1[6] = {1,2,3,1,4,3};
+    int arr1[6] = {1, 3, 4, 1, 4, 3};
     int arr2[6] = {};
     int arr3[6];
     
