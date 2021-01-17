@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Adresa {
     char strada[20];
@@ -15,10 +16,14 @@ int main(){
 */
 
 int main(){
+    char stradaModificata[20] = "Garleanu";
     struct Adresa adr1 = {"Toparceanu", 23, 'C', 'B', 273342};
-    adr1.strada = "Garleanu";
+    
+    strcpy(adr1.strada, stradaModificata);
     adr1.numar = 31;
-    printf("%s, %d, %lf", adr1.strada, adr1.numar, adr1.codPostal);
+    
+    printf("%s, %d", adr1.strada, adr1.numar);
+    
     return 0;
 }   
 
