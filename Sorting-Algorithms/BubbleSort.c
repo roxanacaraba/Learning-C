@@ -13,7 +13,7 @@ void bubbleSort(int arr[], int n)
     for(i = 0; i < n-1; i++)
     {
         for (j = 0; j < n-i-1; j++)
-        { //ultimul i element este deja la locul lui
+        { //ultimele i elemente sunt deja la locul lor
             if(arr[j]>arr[j+1]) 
             {
                 swap(&arr[j], &arr[j+1]);
