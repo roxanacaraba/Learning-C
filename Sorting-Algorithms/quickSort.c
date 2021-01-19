@@ -15,6 +15,7 @@ int partition(int arr[], int low, int high){ // functie de partitionare a vector
         if (arr[j] <= pivot){
             i++;
             swap(&arr[i],&arr[j]);
+    
         }
     }
     swap(&arr[i+1], &arr[high]);
