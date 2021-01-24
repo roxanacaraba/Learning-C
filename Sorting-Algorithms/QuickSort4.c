@@ -1,42 +1,44 @@
 #include<stdio.h>
 
-int quickSort(int arr[], int start, int end){
-    int pivot = start;
+int quicksort(int arr[], int start, int end){
+    if(start >= end){
+        return 0;
+        }
+    
+    int pivot = arr[start];
     int i = start + 1;
     int j = end;
 
-    if(i < j){
-        if(start >= end){
-            return 0;
-        }
+    while(i <= j){
         if(arr[i] < pivot){
             i += 1;
         }
         if(arr[j] > pivot){
             j -= 1;
         }
-        if(i < j && arr[i] > pivot && arr[j] < pivot){
+        if(arr[i] > pivot && arr[j] < pivot && i < j){
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-            i ++;
-            j--;
+            i += 1;
+            j -= 1;
         }
     }
-    arr[start] = arr[i -1];
+    arr[start] = arr[i-1];
     arr[i-1] = pivot;
 
- quickSort(arr, start, i-2);
-           quickSort(arr, i, end);
-        
-}
-int main(){
-   int arr [6] = { 10, 2, 16, 8, 12, 15};
-   int n = sizeof(arr)/sizeof(arr[0]);
+    quicksort(arr, start, i-2);
+    quicksort(arr, i, end);
 
-   quickSort(arr, 0, n-1);
-   for(int i = 0; i < n; i++){
-       printf("%d ", arr[i]);
-   }
+}
+
+int main(){
+    int arr[5] = {3 , 5, 1, 2, 4};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    quicksort(arr, 0, n-1);
+    for(int i = 0; i < n; i++){
+        printf("%d, ", arr[i]);
+    }
     return 0;
 }
