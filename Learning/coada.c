@@ -23,52 +23,57 @@ int isFull(){
    }
 }
 
- int insertion(int elem){
+ int enqueue(int elem){ // addition of an element
      if(!isFull()){
          last = last + 1;
          coada[last] = elem;
      }
      else{
-        printf("Tail is full");
+        printf("Tail is full!\n");
      }
  }
 
- int elimination(){
+ int dequeue(){  // removal of an element 
      if(!isEmpty()){
-        int i;
-        for(i = first; i <= last; i++){
-            coada[i+1] = coada[i];
-            printf("%d", coada[i]);
+         printf("Elementul sters din coada este: %d\n", coada[first]);
+        
         }
-     }
      else{
-         printf("Tail is empty");
+         printf("Tail is empty!\\n");
      }
  }
 
-int read(){
+int front(){   // get the first element
     return (coada[first]);
 }
 
-int main(){
-    int coada[5] ={1, 2, 3, 4};
-    
-    insertion(5);
-    printf("Elements:\n");
-
-    
-    
-    while(!isEmpty()){
-    int elem = elimination();
-        printf("%d, \n", elem);
+int display(){
+    if(!isEmpty()){
+        int i;
+        printf("Elements: \n");
+        for(i = first; i <= last; i++){
+            printf("%d ", coada[i]);
+        }
     }
+}
+
+int main(){
+    
+    enqueue(1);
+    enqueue(2);
+    enqueue(3);
+    enqueue(4);
+    enqueue(5);
+
+    printf("First element in the tail: %d\n" , front());
+
+    dequeue();
+    display();
 
     printf("Tail full: %s\n" , isFull()?"true":"false");
-
-    elimination();
     
 
-    printf("First element in the tail: %d\n" , read());
+    
 
     return 0;
 }
