@@ -36,7 +36,7 @@ int isFull(){
  int dequeue(){  // removal of an element 
      if(!isEmpty()){
          printf("Elementul sters din coada este: %d\n", coada[first]);
-        
+        first += 1;
         }
      else{
          printf("Tail is empty!\\n");
@@ -52,7 +52,7 @@ int display(){
         int i;
         printf("Elements: \n");
         for(i = first; i <= last; i++){
-            printf("%d ", coada[i]);
+            printf("%d`", coada[i]);
         }
     }
 }
