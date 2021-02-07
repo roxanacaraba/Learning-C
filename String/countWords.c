@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 int main(){
-        char str[] = {"this  is a string"};
+        char str[] = {"this  . is a string"};
     int i = 0;
     int count = 0;
     while(str[i] != '\0'){
