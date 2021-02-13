@@ -4,7 +4,7 @@
 #include<string.h>
 
 
-int main(){
+char* main(){
 
     char str[] = {"javascript"};
     char substr[] = {"script"};
@@ -16,12 +16,12 @@ int main(){
         if(str[i] == substr[j]){
             j++;
             if(j == len2){
-                return 1;
+                return "Y";
             }
         }
     }
     if( j != len2){
-        return -1 ;
+        return "N" ;
     }
 }
 

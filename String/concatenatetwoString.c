@@ -26,11 +26,5 @@ int main(){
     res[50] += '\0';
 
     printf("%s", res);
-    
-    printf("After concatenation the string is : \n ");    
-    for(i=0; i < len1; i++)    
-    {
-         printf("%c",str1[i]);
-    }
     return 0;
 }
