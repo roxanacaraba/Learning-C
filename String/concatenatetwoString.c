@@ -11,19 +11,21 @@ int main(){
     int j = len1; // 15
     int len_res = len1 + len2; // 32
     char res[50];
-    int i = 0;
+    int i = 0 , k = 0;
 
 
     while(str1[i] != '\0'){ // copiaza caracterele din str1 in res
-        res[i] = str1[i]; // i de la 0 la 14
+        res[i] = str1[i];
+        i++;  // i de la 0 la 14
     }
-    
-        for( j = len1; j < len_res; j++){ // j este incrementat de la 15 la 31
-            for(i = 0; i < len2; i++){ // i este incrementat de la 0 la 16
-                res[j] = str2[i]; //copiaza caracterele din str2 in res
+
+     for(j = len1; j < len_res; j++){ // j este incrementat de la 15 la 31
+        for(k = 0; k < len2; k++){   // k este incrementat de la 0 la 16
+            res[j] = str2[k]; //copiaza caracterele din str2 in res
         }
     }
-    res[50] += '\0';
+    
+    res[len_res] = '\0';
 
     printf("%s", res);
     return 0;
