@@ -1,27 +1,38 @@
-//    Write a C program to check whether a given substring is present in the given string.
+//Write a C program to check whether a given substring is present in the given string.
 
 #include<stdio.h>
 #include<string.h>
 
 
-char* main(){
+int compare(char str[], char substr[]){
 
-    char str[] = {"javascript"};
-    char substr[] = {"script"};
-    int len1 = strlen(str);
-    int len2 = strlen(substr);
+    int len1 = strlen(str); //10
+    int len2 = strlen(substr); //6
     int i, j = 0;
     
-    for( i = 0; i <= len1; i++){
-        if(str[i] == substr[j]){
+    
+    for(i = 0; i < len1; i++){ // i incrementeaza de la 0 la 10
+        if(str[i] == substr[j]){  // daca str[0]
             j++;
             if(j == len2){
-                return "Y";
+                return 1;
             }
         }
     }
     if( j != len2){
-        return "N" ;
+        return 0;
     }
 }
+int main(){
+    char str[] = {"javascript"};
+    char substr[] = {"script"};
 
+    int result = compare(str, substr);
+    if(result == 1){
+        printf("The substring is present in string");
+    }
+    else{
+        printf("The substring is present in string");
+    }
+    return 0;
+ }
