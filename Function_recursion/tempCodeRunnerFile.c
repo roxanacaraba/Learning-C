@@ -41,8 +41,8 @@ int main(){
 */
 void suma(int i, int *result, int n){
     if(i <= n){
-        *result += i;
-        suma(i + 1, result, n);
+        result += i;
+        suma(n, i + 1, result);
     }
 }
 
