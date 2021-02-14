@@ -18,7 +18,7 @@ int suma(int n){
 
 int main(){
 
-    int n = 10;
+    int n = 1;
     int result = suma(n);
 
     printf("%d ", result);
