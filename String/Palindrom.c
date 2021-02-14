@@ -27,7 +27,8 @@ int main(){
     printf("reverse : %s\n", reverse);
     printf("str : %s\n", str);
 
-    if(str == reverse){
+    int result = strcmp(str, reverse); // strcmp return 0 if the strings are equal.
+    if( result == 0){
         printf("The string is palindrom");
     }
     else{
