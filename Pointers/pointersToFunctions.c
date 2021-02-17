@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-void functie(int a){ // o functie normala avand ca parametru un integer
+/*void functie(int a){ // o functie normala avand ca parametru un integer
     printf("a = %d", a);
 }
 
@@ -12,3 +12,17 @@ int main(){
 
     return 0;
 }
+ sau
+*/
+
+void func(int a){
+    printf("a = %d", a);
+}
+
+int main(){
+    void(*pointer_func)(int) = func;
+    pointer_func(6);
+    return 0;
+}
+
+
