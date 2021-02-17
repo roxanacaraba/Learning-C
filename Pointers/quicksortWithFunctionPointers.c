@@ -3,8 +3,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int compare(const void *a, const void *b){
-    return (*(int*)a - *(int*)b);
+int compare(const void *p1, const void *p2){ 
+
+/*
+<0 The element pointed by p1 goes before the element pointed by p2
+ 0 The element pointed by p1 is equivalent to the element pointed by p2
+>0 The element pointed by p1 goes after the element pointed by p2 */
+
+    return (*(int*)p1 - *(int*)p2);
 }
 
 int main(){
@@ -12,7 +18,7 @@ int main(){
     int len = sizeof(arr)/sizeof(arr[0]);
     int i;
 
-    qsort(arr, len, sizeof(int), compare);
+    qsort(arr, len, sizeof(int), compare); //arr este pointer catre primul elem, len este nr de elemente ale array-ului, sizeof(int) este marimea in bytes a fiecarui element din array, compare este o functie care compara 2 elemente
 
     for (i=0; i< len; i++) 
         printf ("%d ", arr[i]); 
