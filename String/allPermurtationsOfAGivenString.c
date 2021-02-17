@@ -8,7 +8,6 @@ void swap(char *x, char *y){ // fuctie pentru interschimbarea valorilor a doi po
     *x = *y;
     *y = temp;
 }
-
 void permute(char *str, int start, int end){
     int i; 
     if(start == end)
@@ -17,16 +16,13 @@ void permute(char *str, int start, int end){
         for(i = start; i <= end; i++){
             swap((str + start), (str + i));
             permute(str, start + 1, end);
-            swap((str + start), ( str + i));
-
+            swap((str + start), (str + i));
         }
     }
 }
 int main(){
     char str[5] = "ABC";
     int len = strlen(str);
-    
     permute(str, 0, len-1);
     return 0;
-
 }
