@@ -14,7 +14,7 @@ int compare(const void *p1, const void *p2){
 }
 
 int main(){
-    int arr[] = { 4, 2, 9,6, 1};
+    int arr[] = {4, 2, 9,6, 1};
     int len = sizeof(arr)/sizeof(arr[0]);
     int i;
 
